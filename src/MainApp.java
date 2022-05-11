@@ -25,26 +25,29 @@ public class MainApp {
             Integer option = Integer.parseInt(sc.nextLine());
             switch (option) {
                 case 1: {
-                    logic.showAllClass();
-                    break;
-                }
-
-                case 3: {
-                    logic.addClass();
-                    break;
-                }
-                case 4: {
                     logic.addStudent();
                     break;
                 }
-                case 5:{
+                case 2: {
+                    logic.edit();
+                    break;
+                }
+                case 3: {
+                    logic.delete();
+                    break;
+                }
+                case 4: {
                     logic.showAllStudent();
+                    break;
+                }
+                case 5:{
+                    logic.seach();
                 }
                 case 7: {
                     logic.registerNewAccount();
                     break;
                 }
-                case -1: {
+                case 6: {
                     run = false;
                     break;
                 }

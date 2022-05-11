@@ -1,29 +1,27 @@
 package domain;
 
-public class Student {
-
-    private Long id;
+public class Student implements Comparable<Student> {
+    private String id;
     private String name;
-    private Integer age;
-    private Integer gender;
-    private String classId;
+    private int yearBirth;
+    private float point;
 
-    public Student(Long id, String name, Integer age, Integer gender) {
+    public Student() {
+        this.id = id;
+    }
+
+    public Student(String id, String name, int yearBirth, float point) {
         this.id = id;
         this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.classId = classId;
+        this.yearBirth = yearBirth;
+        this.point = point;
     }
 
-    public Student(int name, Object o, String classId) {
-    }
-
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -35,38 +33,39 @@ public class Student {
         this.name = name;
     }
 
-    public Integer getAge() {
-        return age;
+    public int getYearBirth() {
+        return yearBirth;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setYearBirth(int yearBirth) {
+        this.yearBirth = yearBirth;
     }
 
-    public Integer isGender() {
-        return gender;
+    public float getPoint() {
+        return point;
     }
 
-    public void setGender(Integer gender) {
-        this.gender = gender;
-    }
-
-    public String getClassId() {
-        return classId;
-    }
-
-    public void setClassId(String classId) {
-        this.classId = classId;
+    public void setPoint(float point) {
+        this.point = point;
     }
 
     @Override
     public String toString() {
         return "Student{" +
-                "id=" + id +
+                "id='" + id + '\'' +
                 ", name='" + name + '\'' +
-                ", age=" + age +
-                ", gender=" + gender +
-                ", classId='" + classId + '\'' +
+                ", yearBirth=" + yearBirth +
+                ", point=" + point +
                 '}';
     }
+
+    @Override
+    public int compareTo(Student o) {
+        return 0;
+    }
+
+    public void input() {
+    }
 }
+
+
